@@ -1,5 +1,7 @@
 #!/bin/bash
 
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 600
 
 # Define color codes
 GREEN='\033[0;32m'
@@ -41,7 +43,8 @@ sudo apt install curl  #installs curl
     #virtualbox: 
         wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
         #problem:
-        sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" -y
+        sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian Jammy contrib" -y
+        # sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" -y
         sudo apt-key export 2980AECF | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/virutalbox.gpg
     
     #nala:
@@ -49,6 +52,9 @@ sudo apt install curl  #installs curl
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A87015F3DA22D980
         sudo apt-key export DA22D980 | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/slack.gpg
 
+    #Enable the i386 architecture repository for steam installation:
+    sudo dpkg --add-architecture i386
+    
     #lutris:
 
     #wine:
