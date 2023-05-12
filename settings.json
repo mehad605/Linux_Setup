@@ -1,0 +1,41 @@
+{
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.ignoreSelection": true,
+  "editor.fontFamily": "Fira Code,MesloLGS NF",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.fontWeight": "bold",
+  "editor.formatOnSave": true,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 15,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "[css]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.sortImports": true
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.autofetch": true,
+  "glassit.alpha": 220,
+  "tabnine.experimentalAutoImports": true,
+  "[sql]": {
+    // "editor.defaultFormatter": "cweijan.vscode-mysql-client2"
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "workbench.colorTheme": "Dracula",
+  "sql-formatter.uppercase": true,
+  "sql-formatter.linesBetweenQueries": 3,
+  "window.zoomLevel": -1,
+  "editor.wordWrap": "on"
+}

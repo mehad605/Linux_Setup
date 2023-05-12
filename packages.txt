@@ -3,8 +3,6 @@ chrome-gnome-shell
 git
 python3-pip
 python3-venv
-gnome-tweaks
-gnome-shell-extensions
 code
 timeshift
 steam
@@ -25,4 +23,9 @@ zathura
 htop
 earlyoom
 dconf-editor
+flatpak
+gnome-software-plugin-flatpak
 virtualbox-6.1
+nodejs
+npm
+mysql-server
