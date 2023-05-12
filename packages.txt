@@ -13,6 +13,8 @@ scrcpy
 bleachbit
 vlc
 neofetch
+gnome-tweaks
+gnome-shell-extensions
 zsh
 zsh-syntax-highlighting
 autojump

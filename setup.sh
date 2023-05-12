@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+# Define color codes
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+
 #creating directories
 mkdir -p ~/Scripts ~/.themes ~/.icons ~/.local/share/icons ~/Pictures/Wallpapers 
 mkdir -p  ~/.local/share/gedit/styles ~/.config/kitty ~/.config/zathura/ ~/.config/Code/User/
@@ -12,7 +18,7 @@ touch "$HOME/.cache/zshhistory"
 chmod +x $HOME/Linux_Setup/*.sh
 
 #Take user input to change mysql password 
-read -s -p "Enter new password for root user: " new_password
+read -s -p "${GREEN}Enter new password for mysql root user: \n${NC}" new_password
 
 
 #running the gitclone script:
@@ -74,7 +80,7 @@ sudo mysql << EOF
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$new_password';
 FLUSH PRIVILEGES;
 EOF
-echo -e "\nMysql root user password updated.\n"
+echo -e "${GREEN}\nMysql root user password updated.\n${NC}"
 
 
 #installig kitty:
