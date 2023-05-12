@@ -119,8 +119,6 @@ sudo rm -r ~/Vimix-cursors
 dconf load /org/gnome/ < $HOME/Linux_Setup/gnome-backup.txt
 gsettings set org.gnome.desktop.background picture-uri 'file:///$HOME/Pictures/Cappuccin_Wallpapers/spooky_spill.jpg'
 
-
-echo -e "${GREEN}Please Install bottles from the software store after restart if you want to use windows apps on this system${NC}\n"
 echo -e "${GREEN}After restart launch kitty for first time setup${NC}\n"
 
 

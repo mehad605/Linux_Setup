@@ -7,6 +7,11 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
+#flatpak packages:
+flatpak_packages=(
+com.usebottles.bottles
+com.discordapp.Discord
+)
 
 #creating directories
 mkdir -p ~/Scripts ~/.themes ~/.icons ~/.local/share/icons ~/Pictures/Wallpapers 
@@ -54,7 +59,7 @@ sudo apt install curl  #installs curl
 
     #Enable the i386 architecture repository for steam installation:
     sudo dpkg --add-architecture i386
-    
+
     #lutris:
 
     #wine:
@@ -64,6 +69,7 @@ sudo apt install nala -y
 
 #Installig 
     #packages: 
+    
     while read package; do
     if [ "$package" == "brave-browser" ]; then
         # Install the Brave browser and set it as the default browser
@@ -73,14 +79,21 @@ sudo apt install nala -y
         wait
         $HOME/Linux_Setup/gnome_extensions.sh
         wait
+    elif [ "$package" == "gnome-software-plugin-flatpak" ]; then
+        # Install the package and print hello
+        sudo nala install -y "$package"
+        #adding flatpack apps repo
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+        for package in "${flatpak_packages[@]}"
+        do
+             flatpak install flathub $package -y
+        done
     else
         # Install the package using apt
         sudo nala install -y "$package"
     fi
     done < $HOME/Linux_Setup/packages.txt
 
-#adding flatpack apps repo
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 #mysql setup
 sudo mysql << EOF
