@@ -65,7 +65,7 @@ sudo apt install nala -y
         xdg-settings set default-web-browser brave-browser.desktop
         brave-browser https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep &
         wait
-        $HOME/Linux_Setup/visit_sites.sh
+        $HOME/Linux_Setup/gnome_extensions.sh
         wait
     else
         # Install the package using apt
@@ -142,6 +142,8 @@ rm platform-tools-latest-linux.zip
 #running the cousomization script:
 #do customization last because of setting zsh as default
 gnome-terminal --tab --title="customization" --command="bash -c '$HOME/Linux_Setup/desktop_customization.sh; $SHELL'"
+gnome-terminal --tab --title="login" --command="bash -c '$HOME/Linux_Setup/visit_sites.sh; $SHELL'"
+
 
 
 
