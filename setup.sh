@@ -18,7 +18,8 @@ touch "$HOME/.cache/zshhistory"
 chmod +x $HOME/Linux_Setup/*.sh
 
 #Take user input to change mysql password 
-read -s -p "${GREEN}Enter new password for mysql root user: \n${NC}" new_password
+echo -e "${GREEN}Enter new password for mysql root user:${NC}"
+read -s new_password
 
 
 #running the gitclone script:

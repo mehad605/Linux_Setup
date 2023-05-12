@@ -1,5 +1,7 @@
-brave-browser
 chrome-gnome-shell
+gnome-tweaks
+gnome-shell-extensions
+brave-browser
 git
 python3-pip
 python3-venv
@@ -13,8 +15,6 @@ scrcpy
 bleachbit
 vlc
 neofetch
-gnome-tweaks
-gnome-shell-extensions
 zsh
 zsh-syntax-highlighting
 autojump
