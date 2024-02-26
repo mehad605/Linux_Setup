@@ -3,7 +3,7 @@
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 600
 
-# Define color codes
+# Define color codes here
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
